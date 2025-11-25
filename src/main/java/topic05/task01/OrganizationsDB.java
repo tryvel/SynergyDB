@@ -10,7 +10,7 @@ public class OrganizationsDB {
 
         try(Connection connection = DriverManager.getConnection(url, user, password)) {
             String organizationCountSQL = "SELECT COUNT (*) FROM organizations";
-            // при работе с ENUM используется не просто знак '?', а строка формы '?::<список значений ENUM>'
+            // при работе с ENUM используется не просто знак '?', а строка формы '?::<имя списка значений ENUM>'
             String totalAmountSQL = """
                     SELECT
                         CASE
